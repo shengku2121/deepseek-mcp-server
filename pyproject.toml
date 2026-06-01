@@ -1,0 +1,36 @@
+[project]
+name = "deepseek-mcp-server"
+version = "1.0.0"
+description = "DeepSeek API as MCP Server — 95% cheaper AI inference for Claude Code, Cursor, Windsurf, and any MCP-compatible AI agent"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Silicon Legion (硅基军团)"}
+]
+keywords = ["deepseek", "mcp", "mcp-server", "ai", "llm", "claude-code", "cursor", "inference"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.scripts]
+deepseek-mcp = "deepseek_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-dir]
+"deepseek_mcp" = "src/deepseek_mcp"
